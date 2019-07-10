@@ -308,6 +308,10 @@ class Setting(object):
                 self.order < other.order)
     __cmp__ = __lt__
 
+    def __repr__(self):
+        return "%r %s" % (self.value, super(Setting, self).__repr__())
+
+
 Setting = SettingMeta('Setting', (Setting,), {})
 
 
